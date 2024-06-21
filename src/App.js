@@ -9,7 +9,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Outlet,
 } from "react-router-dom";
 
 // create router with JSX Route elements
@@ -23,11 +22,7 @@ const appRouter = createBrowserRouter(
 );
 
 function App() {
-  return (
-    <RouterProvider router={appRouter}>
-      <Outlet />
-    </RouterProvider>
-  );
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;
