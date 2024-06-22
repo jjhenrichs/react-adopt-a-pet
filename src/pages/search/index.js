@@ -5,9 +5,9 @@ import Pet from "../../components/pet";
 import { useSearchParams } from "react-router-dom";
 
 const SearchPage = () => {
-  // Get searchParams object from useSearchParams
+  const [searchParams] = useSearchParams();
 
-  const petNameToFind = "REPLACE ME"; // Get query parameter using searchParams object
+  const petNameToFind = searchParams.get("name");
 
   const [pets, setPets] = useState([]);
 
